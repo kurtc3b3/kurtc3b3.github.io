@@ -1,0 +1,86 @@
+title: kurtc3b3
+title_separator: "|"
+subtitle: Notes on building agentic developer tools
+description: >-
+  A build log for projects like tissue-bot — GitHub data collection,
+  FastAPI backends, Next.js frontends, LangGraph agents, and the
+  infrastructure that ties them together.
+url: "https://kurtc3b3.github.io"
+baseurl: ""
+repository: "kurtc3b3/kurtc3b3.github.io"
+
+remote_theme: mmistakes/minimal-mistakes@4.26.2
+minimal_mistakes_skin: "air"
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-include-cache
+  - jekyll-paginate
+
+paginate: 5
+paginate_path: /page:num/
+
+locale: "en-US"
+timezone: America/New_York
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  syntax_highlighter: rouge
+
+permalink: /:categories/:year-:month-:day-:title/
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: false
+      share: true
+      related: true
+      toc: true
+      toc_sticky: true
+
+author:
+  name: kurtc3b3
+  bio: "Building tissue-bot and related agentic tooling."
+  location: ""
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/kurtc3b3"
+    - label: "tissue-bot"
+      icon: "fas fa-fw fa-code-branch"
+      url: "https://github.com/kurtc3b3/tissue-bot"
+
+footer:
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/kurtc3b3"
+    - label: "tissue-bot"
+      icon: "fas fa-fw fa-code-branch"
+      url: "https://github.com/kurtc3b3/tissue-bot"
+
+include:
+  - _pages
+
+category_archive:
+  type: liquid
+  path: /categories/
+tag_archive:
+  type: liquid
+  path: /tags/
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
